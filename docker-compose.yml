@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: ./excel_reg/excel_reg/.
+    command: bash excel_reg/docker_entrypoint.sh
+    volumes:
+    - .:/excel/excel_reg
+    ports:
+    - "8000:8000"
+                
